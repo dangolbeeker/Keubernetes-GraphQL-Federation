@@ -8,10 +8,10 @@ const gateway = new ApolloGateway({
   // prevents composition failures at runtime using schema validation using
   // real usage-based metrics.
   serviceList: [
-    { name: "accounts", url: "http://localhost:4001/graphql" },
-    { name: "reviews", url: "http://localhost:4002/graphql" },
-    { name: "products", url: "http://localhost:4003/graphql" },
-    { name: "inventory", url: "http://localhost:4004/graphql" }
+    { name: "accounts", url: "http://accounts:4001" },
+    { name: "reviews", url: "http://reviews:4002/" },
+    { name: "products", url: "http://products:4003/" },
+    { name: "inventory", url: "http://inventory:4004/" }
   ],
 
   // Experimental: Enabling this enables the query plan view in Playground.
@@ -32,6 +32,6 @@ const gateway = new ApolloGateway({
   });
 
   server.listen().then(({ url }) => {
-    console.log(`🚀 Server ready at ${url}`);
+    console.log(`🚀 cooler with Kubernetes ${url}`);
   });
 })();
